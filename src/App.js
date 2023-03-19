@@ -30,7 +30,7 @@ import {
 import { useStateContext } from "./context/ContextProvider";
 
 const App = () => {
-  const  { activeMenu } = useStateContext();
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -56,37 +56,43 @@ const App = () => {
             </div>
           )}
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full 
-              ${activeMenu ? "md:ml-72" : "flex-2"}`}
+            className={
+              activeMenu
+                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full  '
+                : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
+            }
           >
-            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full"><Navbar/></div>
-          </div>
-          <div>
-            <Routes>
-              {/* Dashbord */}
-              <Route path="/" element={<Ecommerce />} />
-              <Route path="/ecommerce" element={<Ecommerce />} />
-              {/* pages */}
-              <Route path="/orders" element={<Order />} />
-              <Route path="/employees" element={<Employee />} />
-              <Route path="/customers" element={<Customer />} />
-              {/* APP */}
-              <Route path="/kanban" element={<Kanban />} />
-              <Route path="/editor" element={<Editor />} />
-              <Route path="/celendar" element={<Calender />} />
-              <Route path="/color-picker" element={<ColorPicker />} />
-              {/* charts */}
-              <Route path="/line" element={<LineChart />} />
-              <Route path="/area" element={<Area />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pi" element={<Pie />} />
-              <Route path="/financial" element={<Financial />} />
-              <Route path="/color-mapping" element={<colorMapping />} />
-              <Route path="/pyramid" element={<Pyramid />} />
-              <Route path="/stacked" element={<Stacked />} />
-            </Routes>
-          </div>
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
+              <Navbar />
+            </div>
+            <div>
+
+          <Routes>
+            {/* Dashbord */}
+            <Route path="/" element={<Ecommerce />} />
+            <Route path="/ecommerce" element={<Ecommerce />} />
+            {/* pages */}
+            <Route path="/orders" element={<Order />} />
+            <Route path="/employees" element={<Employee />} />
+            <Route path="/customers" element={<Customer />} />
+            {/* APP */}
+            <Route path="/kanban" element={<Kanban />} />
+            <Route path="/editor" element={<Editor />} />
+            <Route path="/celendar" element={<Calender />} />
+            <Route path="/color-picker" element={<ColorPicker />} />
+            {/* charts */}
+            <Route path="/line" element={<LineChart />} />
+            <Route path="/area" element={<Area />} />
+            <Route path="/bar" element={<Bar />} />
+            <Route path="/pi" element={<Pie />} />
+            <Route path="/financial" element={<Financial />} />
+            <Route path="/color-mapping" element={<colorMapping />} />
+            <Route path="/pyramid" element={<Pyramid />} />
+            <Route path="/stacked" element={<Stacked />} />
+          </Routes>
         </div>
+        </div>
+     </div>
       </BrowserRouter>
     </div>
   );

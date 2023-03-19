@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
-body{
-    margin: 0;
-    padding:0;
-    font-family: "Open Sans", sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.hero-pattern {
+  background: url("https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899174.jpg?w=900&t=st=1679243377~exp=1679243977~hmac=69b2deffef8fc96f24ae906b861b3d70bdcaa84eee6e91fd7eaa281c02ca04d5");
+}
